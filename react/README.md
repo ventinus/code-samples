@@ -15,15 +15,15 @@ At its heart, filters and sorts data. It expects 2 children, the first is treate
 
 The second expected child of `Filterable` is where all of the filtered and sorted data gets passed with `data` as the only injected prop.
 
-Accepted props:
-  * `data`: The array of data to filter/sort. (Required)
-  * `filterGroups`: On object containing information about how each filter should behave. See Examples. (Required)
+Accepted props to `Filterable`:
+  * `data` (Array): The array of data to filter/sort. (Required)
+  * `filterGroups` (Object): On object containing information about how each filter should behave. See example. (Required)
   Can have two keys (at least one is required):
     * `state`: The initial state of the filters to be applied on first render
     * `set`: The complete set of options for that filter
-  * `sorters`: An array of strings representing keys of the data to sort by, formatted like `'key:dir' or just `'key'` with ascending as the default. See Examples. (Optional)
+  * `sorters` (Array): An array of strings representing keys of the data to sort by, formatted like `'key:dir'` or just `'key'` with ascending as the default. See example. (Optional)
 
-### Filterable Examples
+### Filterable Example
 
 ```jsx
 const movies = [
@@ -51,4 +51,28 @@ const movies = [
   <FiltersForm />
   <FilteredBody />
 </Filterable>
+```
+
+
+## Infinite Scroll
+
+A scroll-triggered component for dynamically rendering paginated data.
+
+Accepted props to `InfiniteScroll`:
+  * `data` (Array): The data to paginate (Required)
+  * `skip` (Int): Amount to show before pagination starts. Default is 0
+  * `paginate` (Int): Amount to paginate by. Default is 6
+  * `defaultPagination` (Int): Default page to start pagination. Default is 1
+  * `dataComparator` (Func): A function with two arguments, `prevData` and `nextData`, to check for any custom changes to the data
+
+### InfiniteScroll Example
+
+```jsx
+const dataChanged = (prevData, nextData) => {
+  return prevData.length !== nextData.length || !prevData.every((item, i) => item === nextData[i])
+}
+
+<InfiniteScroll skip={4} dataComparator={dataChanged}>
+  <DataBody />
+</InfiniteScroll>
 ```
