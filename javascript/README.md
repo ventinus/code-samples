@@ -1,7 +1,5 @@
 # Vanilla JavaScript
 
-These had real-life applications.
-
 ## [Checkpoint](https://github.com/ventinus/code-samples/blob/master/javascript/checkpoint.js)
 
 A performant browser lib, similar to [Waypoints](http://imakewebthings.com/waypoints/), with a simple interface and highly customizable triggers. No arguments needed when creating the main `checkpoint` instance. Available methods upon creation include:
