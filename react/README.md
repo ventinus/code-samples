@@ -1,6 +1,6 @@
 # React
 
-Some awesome React components, fully tested
+Some awesome React components, fully tested. Source code and tests included.
 
 ## Filterable
 

@@ -12,11 +12,11 @@ import checkpoint from 'checkpoint'
 
 export default class InfiniteScroll extends Component {
   static propTypes = {
+    data: PropTypes.array.isRequired,
     skip: PropTypes.number,
     paginate: PropTypes.number,
     defaultPagination: PropTypes.number,
-    data: PropTypes.array,
-    dataComparator: PropTypes.func
+    dataComparator: PropTypes.func,
   }
 
   static defaultProps = {
@@ -24,9 +24,9 @@ export default class InfiniteScroll extends Component {
     skip: 0,
     // amount to paginate by
     paginate: 6,
+    // page to start at
     defaultPagination: 1,
-    data: [],
-    dataComparator: null
+    dataComparator: null,
   }
 
   constructor(props) {

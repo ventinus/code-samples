@@ -1,7 +1,5 @@
 import {shallow} from 'enzyme'
-import {InfiniteScroll} from '..'
-
-jest.mock('../../helpers/checkpoint')
+import InfiniteScroll from './InfiniteScroll'
 
 const dataComparator = (prevData, nextData) => {
   return prevData.length !== nextData.length || !prevData.every((item, i) => item === nextData[i])
@@ -13,7 +11,7 @@ const props = (opts = {}) => ({
   skip: 0,
   paginate: 2,
   defaultPagination: 1,
-  ...opts
+  ...opts,
 })
 
 const InfiniteComponent = opts => (
