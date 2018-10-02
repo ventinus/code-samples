@@ -2,7 +2,7 @@
 
 Some awesome React components, fully tested. Source code and tests included.
 
-## Filterable
+## [Filterable](https://github.com/ventinus/code-samples/blob/master/react/Filterable.js)
 
 At its heart, filters and sorts data. It expects 2 children, the first is treated as the form for interacting with the filters/sorters. Props injected to that child are:
   * `filters`: All available filters
@@ -54,7 +54,7 @@ const movies = [
 ```
 
 
-## Infinite Scroll
+## [Infinite Scroll](https://github.com/ventinus/code-samples/blob/master/react/InfiniteScroll.js)
 
 A scroll-triggered component for dynamically rendering paginated data.
 
