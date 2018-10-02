@@ -23,7 +23,7 @@ const checkpoint = () => {
 
   const DEFAULT_CHECKPOINT_OPTIONS = {
     trigger: 'top',
-    offset: 1,
+    offset: 0.5,
     triggerOnce: false,
     handler(direction, element) {
       console.log('define handler. direction is', direction, element)
